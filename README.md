@@ -1,6 +1,6 @@
 # yfinance2
 
-Clojure app to download yahoo finance data. Modified from ghoseb's project yfinance, using http-kit and paralellization.
+Clojure app to download yahoo finance data. Modified from ghoseb's project yfinance, using http-kit and parallelization.
 
 ## Installation
 
