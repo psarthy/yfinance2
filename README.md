@@ -1,6 +1,6 @@
 # yfinance2
 
-FIXME: description
+Clojure app to download yahoo finance data. Modified from ghoseb's project yfinance, using http-kit and paralellization.
 
 ## Installation
 
@@ -17,9 +17,10 @@ FIXME: explanation
 FIXME: listing of options this app accepts.
 
 ## Examples
-
-...
-
+;;easy
+(def ticlist '("Y" "ISRG" "CABO" "UHAL" "NEU" "BH" "ALX" "ATRI" "BLK" "MTD" "ADS" "EQIX" "AGN" "BIIB" "ORLY" "NWLI" "SHW" "FCNCA" "PCP" "ICE") )
+;; to download
+(def out (fetch-historical-data-group-big "2014-10-14" "2015-10-17" ticlist))
 ### Bugs
 
 ...
