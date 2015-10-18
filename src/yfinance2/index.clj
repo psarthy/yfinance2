@@ -68,7 +68,7 @@
 (defn fetch-historical-data-group-big[start end syms]
 "Parallelize the fetch data function using pmap, but restrict the number of threads"
   (letfn [ (fetch-historical-data-group [start1 end1 syms1] (map (partial fetch-historical-data start1 end1) syms1)) ]
-(let [data (pmap (partial fetch-historical-data-group start end) (partition-all 2 syms))
+(let [data (pmap (partial fetch-historical-data-group start end) (partition-all 10 syms))
       data2 (apply concat data)
       ](identity data2))
 ))
